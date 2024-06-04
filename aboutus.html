@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - SKYCAST Weather</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+body, h1, h2, h3, p, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+
+body {
+  font-family: Arial, sans-serif;
+   position:relative;
+  background-image:url("e9979914-b338-4cef-adcd-031b6bbac9ae.jpg");
+  background-position:center;
+    background-size: cover;
+    height:100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 0 20px;
+  background-color: none;
+}
+
+
+.about-section {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.about-section h2 {
+  font-size: 35px;
+  margin-bottom: 20px;
+  color: #333; 
+}
+
+.about-section h3 {
+  font-size: 30px;
+  margin-top: 20px;
+  color: #333; 
+}
+
+
+.about-section p {
+  font-size: 25px;
+  line-height: 1.6;
+  color: #666; 
+}
+
+
+.about-section ul {
+  padding-left: 20px;
+}
+
+.about-section ul li {
+  margin-bottom: 10px;
+}
+
+.about-section a {
+  color: #fc88ef; 
+  text-decoration: none;
+}
+
+.about-section a:hover {
+  text-decoration: underline; 
+}
+#homeButton {
+  position: fixed; /* Position the button fixed to the viewport */
+  bottom: 0px; /* 10px from the bottom */
+   
+  padding: 5px 20px;
+  background-color: #010305;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  height:40px;
+  width:40%;
+  justify-content:center;
+
+}
+
+#homeButton:hover {
+  background-color: #2c3e52;
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="about-section">
+      <a href="final.html"><button class="btn btn-success animate__animated animate__bounce" id="homeButton">Home</button></a>
+      <h2>About SKYCAST Weather</h2>
+      <p>At SKYCAST Weather, we are passionate about providing accurate and reliable weather forecasts to help you plan your day with confidence...</p>
+      <h3>Our Commitment</h3>
+      <ul>
+        <li>Accuracy: We strive to provide the most accurate weather forecasts...</li>
+        <li>Reliability: You can rely on us to deliver reliable weather information...</li>
+        <li>Accessibility: Our weather forecasts are easily accessible...</li>
+      </ul>
+      <h3>Our Services</h3>
+      <ul>
+        <li>Local Weather: Get up-to-date weather forecasts for your location...</li>
+        <li>Global Coverage: Stay informed about weather conditions around the world...</li>
+        <li>Customized Alerts: Receive personalized weather alerts for your location...</li>
+      </ul>
+      <h3>Contact Us</h3>
+      <p>Have questions or feedback? Contact our support team at <a href="mailto:support@skycastweather.com">support@skycastweather.com</a> or follow us on social media for the latest updates and weather news.</p>
+    </div>
+  </div>
+</body>
+</html>
