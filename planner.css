@@ -1,0 +1,79 @@
+body {
+    background-image: url("dc452958-8122-47e9-abfa-00086eb27427.jpg");
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:#ea8eb8;
+    
+  }
+  
+  .container {
+    margin-top: 50px;
+    text-align: center;
+  }
+  
+  h1 {
+    color: #ff6b6b;
+    font-size: 36px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-control {
+    border-radius: 20px;
+  }
+  
+  .btn-primary {
+    background-color: #ff6b6b;
+    border: none;
+    border-radius: 20px;
+  }
+  
+  .btn-primary:hover {
+    background-color: #ff4d4d;
+  }
+  
+  #tripDetails {
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  #tripDetails.show {
+    opacity: 1; /* Show with fade-in effect */
+  }
+
+  #homeButton {
+    position: relative;
+    bottom: 0px; /* Adjust this value to change the distance from the bottom */
+    left: 30%;
+   
+    padding: 5px 20px;
+    background-color: #0d151e;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width:40%;
+    height:40px;
+  }
+  
+  #homeButton:hover {
+    background-color: #2c3e52;
+    animation: pulse 1s infinite;
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="weatherApp">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles1.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+ 
+  
+</head>
+<body ng-controller="weatherController" ng-class="seasonClass()">
+  
+  <div class="header-buttons">
+  <div class="left">
+    <a href="frontend\register.html"><button class="btn btn-success animate__animated animate__bounce">Sign Up</button></a>
+    <a href="frontend\login.html"><button class="btn btn-success animate__animated animate__bounce">Login</button></a>
+    
+  </div>
+  
+    <a href="planner.html"><button class="btn btn-primary animate__animated animate__bounce">Planner</button></a>
+    <a href="map.html"><button class="btn btn-primary animate__animated animate__bounce">Map</button></a>
+    <a href="news.html"><button class="btn btn-primary animate__animated animate__bounce">News <Article></Article></button></a>
+    <a href="share.html"><button class="btn btn-primary animate__animated animate__bounce">Share</button></a>
+
+  
+  
+  </div>
+  
+  <div class="container">
+    
+    <div class="temperature-toggle">
+      <p align='right'>
+      <button class="btn btn-secondary" ng-click="toggleTemperatureUnit('C')">°C</button>
+      <button class="btn btn-secondary" ng-click="toggleTemperatureUnit('F')">°F</button></p>
+    </div>
+    
+    <h1><marquee behavior="scroll" direction="right"><span id='sky'>SKYCAST WEATHER</span></marquee> </h1>
+    
+    <div class="location">
+      <input type="text" ng-model="city" placeholder="Enter city name">
+      <button class="btn " ng-click="searchWeather()">Search</button>
+    </div>
+    <div class="weather-info" ng-if="weatherData">
+      <h2>{{weatherData.name}}</h2>
+      <p>Weather: {{weatherData.weather[0].description}}</p>
+      <p>Temperature: 
+        <span ng-if="temperatureUnit === 'C'">{{weatherData.main.temp}}°C</span>
+        <span ng-if="temperatureUnit === 'F'">{{convertToFahrenheit(weatherData.main.temp)}}°F</span>
+      </p>
+      
+
+      <p>Humidity: {{weatherData.main.humidity}}%</p>
+      <p>Wind Speed: {{weatherData.wind.speed}} m/s</p>
+      <p ng-if="weatherData.season">Season: {{weatherData.season}}</p>
+      <p ng-if="weatherData.rainfall">Rainfall: {{weatherData.rainfall}} mm</p>
+    </div>
+    <div class="error" ng-if="error">{{error}}</div>
+  </div>
+  
+       <footer class="footer fixed-bottom">
+        <ul class="list-inline">
+        <li class=" list-inline-item " id="copy" >&copy; 2024 SkyCast Weather </li> <nbsp></nbsp>
+              
+                  <li class="list-inline-item"><a href="aboutus.html" >About Us</a></li> 
+                  <li class="list-inline-item"><a href="#" >Terms</a></li>
+                  <li class="list-inline-item"><a href="#" >Privacy Policy</a></li>
+                  <li class="list-inline-item"><a href="frontend\contact.html" >Contact</a></li><nbsp></nbsp>
+                  <li id="clock" class=" list-inline-item"></li>
+              </ul>
+         
+</footer>
+
+ 
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <script src="script1.js"></script>
+</body>
+</html>

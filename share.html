@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Share - SKYCAST Weather</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url("a0d64464-f2e6-4737-bb80-b2ea2c7244d4.jpg");
+      margin: 0;
+      padding: 0;
+      background-position:center;
+    background-size: cover;
+    height:100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    
+    }
+
+    .container {
+      width: 800px;
+      margin: 20px auto;
+      padding: 0 20px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      color:rgb(28, 247, 54);
+      font-size:50px;
+      font-weight:900;
+    }
+
+    p {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size:40px;
+      font-weight:700;
+      color:#5e3b13;
+
+    }
+
+    .share-buttons {
+      display: flex;
+      justify-content: center;
+    }
+
+    .btn {
+      display: block;
+      padding: 10px 20px;
+      margin: 0 10px;
+      text-decoration: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background-color: #007bff;
+      color: #fff;
+    }
+
+    .btn-info {
+      background-color: #17a2b8;
+      color: #fff;
+    }
+
+    .btn-danger {
+      background-color: #dc3545;
+      color: #fff;
+    }
+    #homeButton {
+    position: fixed;
+    bottom: 5px; /* Adjust this value to change the distance from the bottom */
+    left: 30%;
+    
+    padding: 5px 20px;
+    background-color: #0d151e;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width:40%;
+    height:40px;
+  }
+  
+  #homeButton:hover {
+    background-color: #2c3e52;
+    animation: pulse 1s infinite;
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Share SKYCAST Weather</h1>
+    <p>Share this weather app with your friends!</p>
+    <div class="share-buttons">
+      <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fexample.com%2F" target="_blank" class="btn btn-primary">Share on Facebook</a>
+      <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fexample.com%2F&amp;text=Check%20out%20this%20weather%20app!" target="_blank" class="btn btn-info">Share on Twitter</a>
+      <a href="mailto:?subject=Check%20out%20this%20weather%20app!&amp;body=I%20found%20this%20weather%20app%20and%20thought%20you%20might%20like%20it:%20https%3A%2F%2Fexample.com%2F" class="btn btn-danger">Share via Email</a>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <a href="final.html"><button class="btn btn-success animate__animated animate__bounce" id="homeButton">Home</button></a>
+
+</body>
+</html>

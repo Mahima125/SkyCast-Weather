@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Planner</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="planner.css">
+</head>
+<body onload="checkCookie()">
+  <div class="container">
+   
+    <h1 class="text-center mt-4">Travel Planner</h1>
+    <div class="row mt-4">
+      <div class="col-md-6 offset-md-3">
+        <form id="travelForm">
+          <div class="form-group">
+            <label for="destination">Destination</label>
+            <input type="text" class="form-control" id="destination" placeholder="Enter destination">
+          </div>
+          <div class="form-group">
+            <label for="departureDate">Departure Date</label>
+            <input type="date" class="form-control" id="departureDate">
+          </div>
+          <div class="form-group">
+            <label for="returnDate">Return Date</label>
+            <input type="date" class="form-control" id="returnDate">
+          </div>
+          <div class="form-group">
+            <label for="travelers">Number of Travelers</label>
+            <input type="number" class="form-control" id="travelers" min="1">
+          </div>
+          <div class="form-group">
+            <label for="transportation">Transportation Type</label>
+            <select class="form-control" id="transportation">
+              <option value="flight">Flight</option>
+              <option value="train">Train</option>
+              <option value="bus">Bus</option>
+              <option value="car">Car</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="accommodation">Accommodation</label>
+            <select class="form-control" id="accommodation">
+              <option value="hotel">Hotel</option>
+              <option value="hostel">Hostel</option>
+              <option value="airbnb">Airbnb</option>
+            </select>
+          </div>
+          <!-- Add more form elements for other features -->
+          <button type="submit" class="btn btn-primary btn-block">Plan Trip</button>
+        </form>
+        <div id="tripDetails" class="mt-4"></div>
+      </div>
+    </div>
+  </div>
+  <br><br><br>
+  
+  <a href="final.html"><button class="btn btn-success animate__animated animate__bounce" id="homeButton">Home</button></a>
+
+  <script src="planner.js"></script>
+</body>
+</html>
