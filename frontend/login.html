@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Form</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="signup.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h2 class="text-center">Login Form</h2>
+      <form id="loginForm" class="row g-3">
+        <div class="col-12">
+          <label for="username" class="form-label">Username:</label>
+          <input
+            type="text"
+            id="username"
+            name="username"
+            class="form-control"
+            required
+          />
+        </div>
+        <div class="col-12">
+          <label for="email" class="form-label">Email:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            class="form-control"
+            required
+          />
+        </div>
+        <div class="col-12">
+          <label for="password" class="form-label">Password:</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            class="form-control"
+            required
+          />
+        </div>
+        <div class="col-12">
+          <button type="submit" class="btn btn-primary" id="login">
+            Login
+          </button>
+          <a href="../final.html"><button class="btn btn-success animate__animated animate__bounce" id="homeButton">Home</button></a>
+        </div>
+        <div id="message" class="message col-12"></div>
+      </form>
+    </div>
+    <script>
+      const login = async () => {
+        document.addEventListener("DOMContentLoaded", function () {
+          document
+            .getElementById("loginForm")
+            .addEventListener("submit", function (event) {
+              event.preventDefault(); // Prevent default form submission
+
+              var username = document.getElementById("username").value;
+              var email = document.getElementById("email").value;
+              var password = document.getElementById("password").value;
+
+              // Simple validation (you can add more complex validation as needed)
+              if (!username || !email || !password) {
+                document.getElementById("message").textContent =
+                  "Please fill in all fields";
+                return;
+              }
+
+              axios
+                .post("http://localhost:3000/auth/login", {
+                  username,
+                  email,
+                  password,
+                })
+                .then((response) => {
+                  //alert(response.data);
+                  window.location.href = "./activity.html";
+                  //alert("Feedback Saved");
+                })
+                .catch((error) => {
+                  console.error("Error:", error);
+                  //window.location.href = "./activity.html";
+                  alert("login failed");
+                });
+            });
+        });
+      };
+      const loginButton = document.getElementById("login");
+      loginButton.addEventListener("click", login());
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
